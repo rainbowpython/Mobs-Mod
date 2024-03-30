@@ -1,5 +1,6 @@
 package com.example.name.modid.entity.custom;
 
+import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttribute;
@@ -14,6 +15,7 @@ import net.minecraft.world.World;
 
 
 public class BloodSquidEntity extends SquidEntity{
+    public final AnimationState swimming = new AnimationState();
 
     public BloodSquidEntity(EntityType<? extends SquidEntity> entityType, World world) {
         super(entityType, world);
@@ -22,6 +24,7 @@ public class BloodSquidEntity extends SquidEntity{
     public static DefaultAttributeContainer.Builder createBloodSquidAttributes(){
         return MobEntity.createMobAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 15);
     }
+    /*
     private Vec3d applyBodyRotations(Vec3d shootVector) {
         Vec3d vec3d = shootVector.rotateX(this.prevTiltAngle * ((float)Math.PI / 180));
         vec3d = vec3d.rotateY(-this.prevBodyYaw * ((float)Math.PI / 180));
@@ -36,7 +39,7 @@ public class BloodSquidEntity extends SquidEntity{
             ((ServerWorld)this.getWorld()).spawnParticles(this.getInkParticle(), vec3d.x, vec3d.y + 0.5, vec3d.z, 0, vec3d3.x, vec3d3.y, vec3d3.z, 0.1f);
         }
     }
-
+    */
     protected ParticleEffect getInkParticle() {
         return ParticleTypes.ANGRY_VILLAGER;
     }
