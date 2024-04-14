@@ -4,7 +4,10 @@ package com.example.name.modid.entity.client;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.*;
 import net.minecraft.client.render.entity.model.SinglePartEntityModel;
+
 import net.minecraft.client.util.math.MatrixStack;
+
+import com.example.name.modid.entity.animation.ModAnimations;
 import com.example.name.modid.entity.custom.BloodSquidEntity;
 
 
@@ -56,8 +59,10 @@ public class BloodSquidModel<T extends BloodSquidEntity> extends SinglePartEntit
 	public void setAngles(BloodSquidEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 		this.getPart().traverse().forEach(ModelPart::resetTransform);
 
+		//this.animateMovement(ModAnimations.swimAnimation, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
 		this.animateMovement(null, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
 	}
+
 	@Override
 	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
 		body.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);

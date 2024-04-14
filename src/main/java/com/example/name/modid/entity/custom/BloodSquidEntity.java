@@ -17,6 +17,8 @@ import net.minecraft.world.World;
 public class BloodSquidEntity extends SquidEntity{
     public final AnimationState swimming = new AnimationState();
 
+    private int idleAnimationTimeout = 0;
+
     public BloodSquidEntity(EntityType<? extends SquidEntity> entityType, World world) {
         super(entityType, world);
     }
