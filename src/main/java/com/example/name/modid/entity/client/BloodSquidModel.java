@@ -60,7 +60,7 @@ public class BloodSquidModel<T extends BloodSquidEntity> extends SinglePartEntit
 		this.getPart().traverse().forEach(ModelPart::resetTransform);
 
 		//this.animateMovement(ModAnimations.swimAnimation, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-		this.animateMovement(null, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+		this.animateMovement(ModAnimations.swimAnimation, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
 	}
 
 	@Override
@@ -77,8 +77,8 @@ public class BloodSquidModel<T extends BloodSquidEntity> extends SinglePartEntit
 	}
 	@Override
 	public ModelPart getPart() {
-		
-		throw new UnsupportedOperationException("Unimplemented method 'getPart'");
+		return body;
+		//throw new UnsupportedOperationException("Unimplemented method 'getPart'");
 	}
 	
 }
