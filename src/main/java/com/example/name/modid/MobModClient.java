@@ -11,11 +11,9 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 
 public class MobModClient implements ClientModInitializer{
-
     @Override
     public void onInitializeClient() {
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.BLOOD_SQUID, BloodSquidModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.BLOOD_SQUID, BloodSquidRenderer::new);
     }
-    
 }

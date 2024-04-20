@@ -13,4 +13,7 @@ import net.minecraft.util.Identifier;
 public class ModEntities {
     public static final EntityType<BloodSquidEntity> BLOOD_SQUID = Registry.register(Registries.ENTITY_TYPE,
      new Identifier(MobMod.MOD_ID, "bloodsquid"), FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, BloodSquidEntity::new).build());
+     public static void registerModEntities() {
+        MobMod.LOGGER.info("Registering Entities for " + MobMod.MOD_ID);
+    }
 }

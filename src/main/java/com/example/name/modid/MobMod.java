@@ -23,5 +23,6 @@ public class MobMod implements ModInitializer {
 		// Proceed with mild caution.
 		FabricDefaultAttributeRegistry.register(ModEntities.BLOOD_SQUID, BloodSquidEntity.createBloodSquidAttributes());
 		LOGGER.info("Hello Fabric world!");
+		ModEntities.registerModEntities();
 	}
 }

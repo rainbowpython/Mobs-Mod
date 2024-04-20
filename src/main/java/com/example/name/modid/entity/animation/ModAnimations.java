@@ -6,7 +6,7 @@ import net.minecraft.client.render.entity.animation.Keyframe;
 import net.minecraft.client.render.entity.animation.Transformation;
 
 public class ModAnimations {
-	public static final Animation swimAnimation = Animation.Builder.create(2.25f).looping()
+	/*public static final Animation swimAnimation = Animation.Builder.create(2.25f).looping()
 		.addBoneAnimation("tentacle1", new Transformation(Transformation.Targets.ROTATE, 
 			new Keyframe(0.0F, AnimationHelper.createRotationalVector(0.0F, 0.0F, 0.0F), Transformation.Interpolations.CUBIC),
 			new Keyframe(1.2083F, AnimationHelper.createRotationalVector(55.0F, 0.0F, 0.0F), Transformation.Interpolations.LINEAR),
@@ -47,5 +47,5 @@ public class ModAnimations {
 			new Keyframe(1.2083F, AnimationHelper.createRotationalVector(55.0F, 0.0F, 0.0F), Transformation.Interpolations.LINEAR),
 			new Keyframe(2.25F, AnimationHelper.createRotationalVector(0.5F, 0.0F, 0.0F), Transformation.Interpolations.LINEAR)
 		))
-		.build();
+		.build();*/
 }

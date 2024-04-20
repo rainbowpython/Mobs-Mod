@@ -7,4 +7,8 @@ import net.minecraft.util.Identifier;
 
 public class ModModelLayers {
     public static final EntityModelLayer BLOOD_SQUID = new EntityModelLayer(new Identifier(MobMod.MOD_ID, "bloodsquid"), "main");
+
+    
 }
+
+
